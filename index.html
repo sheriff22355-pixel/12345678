@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101a35">
+<title>ملخص المناهج وتنظيماتها | شرح واختبار</title>
+<style>
+:root{--bg:#0b1224;--panel:#121e38;--panel2:#172744;--text:#eef4ff;--muted:#aab9d2;--blue:#59a7ff;--cyan:#55e0d0;--gold:#ffd166;--green:#26c281;--red:#ff647c;--line:rgba(255,255,255,.11);--shadow:0 18px 50px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 10% 0%,#1c3761 0,transparent 30%),radial-gradient(circle at 100% 30%,#153c4b 0,transparent 25%),var(--bg);color:var(--text);line-height:1.9}
+button{font:inherit;cursor:pointer}.wrap{width:min(1100px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(9,16,32,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px 0}.brand{font-weight:900;letter-spacing:.2px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;padding:7px 12px;border-radius:20px;font-size:14px}.navlinks a:hover{background:var(--panel2);color:white}
+.hero{padding:68px 0 45px;text-align:center}.badge{display:inline-block;padding:5px 15px;border:1px solid rgba(85,224,208,.35);border-radius:30px;color:var(--cyan);background:rgba(85,224,208,.08);font-size:13px}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.35;margin:18px 0 12px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:17px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:0;border-radius:13px;padding:12px 22px;font-weight:800;transition:.2s;display:inline-flex;align-items:center;gap:8px}.btn:hover{transform:translateY(-3px);filter:brightness(1.08)}.primary{background:linear-gradient(135deg,var(--blue),#7168f5);color:white;box-shadow:0 10px 25px #3878d344}.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:24px auto 0;max-width:650px}.stat{background:rgba(255,255,255,.045);border:1px solid var(--line);padding:12px;border-radius:14px}.stat b{display:block;color:var(--gold);font-size:22px}.stat small{color:var(--muted)}
+section{padding:28px 0;scroll-margin-top:85px}.section-title{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-size:26px}.section-title .num{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--blue),#7569ed);font-size:17px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{background:linear-gradient(145deg,rgba(23,39,68,.95),rgba(16,29,52,.95));border:1px solid var(--line);border-radius:18px;padding:21px;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;color:#9bcaff;font-size:19px}.card p{margin:7px 0;color:#dbe6f7}.card ul{margin:8px 0;padding-right:22px;color:#dbe6f7}.card li{margin:5px 0}.tag{display:inline-block;font-size:12px;color:var(--cyan);background:#55e0d018;border:1px solid #55e0d033;padding:2px 9px;border-radius:20px;margin-bottom:8px}.highlight{border-right:4px solid var(--cyan)}.note{padding:14px 17px;background:rgba(255,209,102,.09);border:1px solid rgba(255,209,102,.25);border-radius:14px;color:#ffe6a5;margin-top:15px}
+.compare{overflow-x:auto;border:1px solid var(--line);border-radius:16px}.compare table{width:100%;border-collapse:collapse;min-width:620px;background:#111e37}.compare th{background:#24466f;color:white}.compare td,.compare th{padding:14px;text-align:right;border-bottom:1px solid var(--line)}.compare tr:last-child td{border-bottom:0}.compare td:first-child{font-weight:bold;color:var(--gold);width:18%}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.pillar{padding:18px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}.pillar .icon{font-size:25px}.pillar h3{margin:5px 0;color:var(--cyan)}
+.exam-intro{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.exam-box{background:linear-gradient(145deg,#152746,#101b32);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.progress-wrap{height:9px;background:#263752;border-radius:20px;overflow:hidden;margin:14px 0 22px}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue));transition:.3s}.qmeta{color:var(--muted);font-size:14px}.question{font-size:21px;font-weight:bold;margin:8px 0 18px}.answers{display:grid;gap:10px}.answer{width:100%;text-align:right;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:#1a2a47;color:var(--text);transition:.18s}.answer:hover:not(:disabled){border-color:var(--blue);transform:translateX(-3px)}.answer.selected{border-color:var(--blue);background:#285080}.answer.correct{background:rgba(38,194,129,.16);border:1px solid var(--green);color:#9ff0ca}.answer.wrong{background:rgba(255,100,124,.14);border:1px solid var(--red);color:#ffb5c1}.feedback{margin-top:13px;padding:12px;border-radius:12px;display:none}.feedback.good{display:block;background:#26c28118;color:#9ff0ca;border:1px solid #26c28166}.feedback.bad{display:block;background:#ff647c18;color:#ffb5c1;border:1px solid #ff647c66}.exam-controls{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}.exam-controls .btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.result{display:none;text-align:center;padding:25px}.score{font-size:54px;font-weight:900;color:var(--gold);line-height:1.3}.result h3{font-size:25px}.review{margin-top:18px;text-align:right}.review-item{padding:12px;margin:9px 0;border-radius:12px;background:#1a2a47;border-right:4px solid var(--line)}.review-item.ok{border-color:var(--green)}.review-item.no{border-color:var(--red)}footer{text-align:center;color:var(--muted);padding:35px 10px;border-top:1px solid var(--line);margin-top:35px;font-size:13px}
+@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:2px}.navlinks a{padding:5px 8px}.grid,.pillars{grid-template-columns:1fr}.hero{padding-top:48px}.stats{gap:7px}.stat{padding:9px 5px}.stat b{font-size:18px}.section-title{font-size:22px}.card{padding:17px}.exam-box{padding:16px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <div class="brand">📘 ملخص <span>المناهج وتنظيماتها</span></div>
+  <nav class="navlinks"><a href="#intro">الشرح</a><a href="#comparison">المقارنة</a><a href="#foundations">الأسس</a><a href="#elements">العناصر</a><a href="#exam">الامتحان</a></nav>
+</div></header>
+<main>
+<div class="wrap">
+<section class="hero" id="intro">
+  <span class="badge">مراجعة تفاعلية • شرح + اختبار فوري</span>
+  <h1>افهم المنهج…<br><em>واختبر نفسك بثقة</em></h1>
+  <p>شرح منظم لأبرز النقاط الواردة في ملف «ملخص كتاب المناهج وتنظيماتها»، مع مقارنة بين المفهوم التقليدي والحديث، ثم امتحان تفاعلي يصحح إجاباتك فورًا.</p>
+  <div class="actions"><a class="btn primary" href="#lesson">ابدأ المذاكرة ←</a><a class="btn secondary" href="#exam">📝 ابدأ الامتحان</a></div>
+  <div class="stats"><div class="stat"><b>4</b><small>أسس لبناء المنهج</small></div><div class="stat"><b>2</b><small>مفهومان للمنهج</small></div><div class="stat"><b>10</b><small>أسئلة في الاختبار</small></div></div>
+</section>
+
+<section id="lesson">
+<h2 class="section-title"><span class="num">01</span> مفهوم المنهج وتطوره</h2>
+<div class="grid">
+ <article class="card highlight"><span class="tag">المفهوم التقليدي</span><h3>المنهج التقليدي</h3><p>هو مجموعة المواد والمقررات الدراسية التي يدرسها الطالب تحت إشراف المدرس المتخصص. ويركز على النواحي العقلية وإتقان المادة الدراسية، مع إغفال نسبي للجوانب الجسمية والاجتماعية والوجدانية.</p></article>
+ <article class="card highlight"><span class="tag">المفهوم الحديث</span><h3>المنهج الحديث</h3><p>يمثل جميع الأنشطة والخبرات المخططة والهادفة التي تقدمها المدرسة للطلبة تحت إشرافها ورعايتها، داخل المدرسة أو خارجها؛ لمساعدتهم على تحقيق النمو الشامل وتعديل السلوك وفق فلسفة المجتمع.</p></article>
+</div>
+<article class="card" style="margin-top:15px"><h3>المعنى اللغوي والاصطلاحي</h3><p><b>لغةً:</b> كلمة «منهج» مشتقة من «نهج»، أي الطريق الواضح المستقيم.</p><p><b>اصطلاحًا:</b> تعددت اتجاهات تعريف المنهج، ومنها وصف المحتوى، ووصف الموقف التعليمي باعتباره خبرة، ووصف المخرجات النهائية، وأنماط التفكير الإنساني، والنظر إلى المنهج باعتباره نظامًا متكاملًا يربط الأهداف والمحتوى والتدريس والتقويم بشكل وظيفي.</p></article>
+</section>
+
+<section id="comparison">
+<h2 class="section-title"><span class="num">02</span> مقارنة بين الفكر التقليدي والحديث</h2>
+<div class="compare"><table>
+<thead><tr><th>وجه المقارنة</th><th>المنهج التقليدي</th><th>المنهج الحديث</th></tr></thead>
+<tbody>
+<tr><td>المادة الدراسية</td><td>غاية في ذاتها، مزدحمة بالمعلومات ومنفصلة عن الفوائد الحياتية.</td><td>وسيلة لمساعدة المتعلم، تعالج الازدحام بإعادة التنظيم وتركز على مهارات التفكير.</td></tr>
+<tr><td>التلميذ</td><td>سلبي ومجرد مخزن للمعلومات، مع إهمال الفروق الفردية وميوله.</td><td>إيجابي ونشط ومشارك، ويتم الاهتمام بجميع أبعاد نموه المتكامل.</td></tr>
+<tr><td>المعلم</td><td>ناقل وملقن ومصدر وحيد للمعلومات، يعتمد على المحاضرة فقط.</td><td>مرشد وموجه ومقوم ومدير للفصل وميسر للعملية التعليمية.</td></tr>
+<tr><td>الحياة المدرسية</td><td>تسلطية، والأنشطة والخبرات خارجها محدودة، ولا يوجد تفاعل مع البيئة الخارجية.</td><td>بيئة تعاونية مليئة بالنشاطات، وتتعلق بحاجات البيئة والمجتمع.</td></tr>
+</tbody></table></div>
+<div class="note">💡 تذكّر: الفكرة الأساسية في المنهج الحديث هي الاهتمام بالمتعلم ونموه الشامل، وليس الاقتصار على حفظ المعلومات.</div>
+</section>
+
+<section id="foundations">
+<h2 class="section-title"><span class="num">03</span> أسس بناء المنهج التعليمي</h2>
+<div class="pillars">
+ <article class="pillar"><div class="icon">🏛️</div><h3>1. الأسس الفلسفية</h3><p>تحدد نوعية الأهداف ومحتوى المنهج. وتنقسم إلى الفلسفة التقليدية، مثل المثالية والواقعية، التي تركز على العقل ونقل التراث الثقافي عبر المحاضرة؛ والفلسفة التقدمية التي تهتم بحاجات الطفل ومشكلات المجتمع الحاضر.</p></article>
+ <article class="pillar"><div class="icon">🤝</div><h3>2. الأسس الاجتماعية</h3><p>تعبر عن القيم المجتمعية التي ينبغي ترجمتها إلى سلوكيات، مثل الحرية واحترام شخصية الفرد والتفاعل الاجتماعي الإيجابي والتعاون والتنافس الشريف وتكافؤ الفرص والمساواة ومعالجة المشكلات الاجتماعية.</p></article>
+ <article class="pillar"><div class="icon">🧠</div><h3>3. الأسس النفسية</h3><p>تركز على طبيعة المتعلم وخصائص نموه. فالتعلم يحتاج إلى نضج وتدريب واستعداد جسمي وعقلي وانفعالي، مع مراعاة الفروق الفردية والدوافع.</p></article>
+ <article class="pillar"><div class="icon">🔬</div><h3>4. الأسس المعرفية والثقافية</h3><p>ترتبط بالتطور في الفكر التربوي، ومواكبة التغيرات المستقبلية والانفجار المعرفي في شتى مجالات التعليم.</p></article>
+</div>
+</section>
+
+<section id="elements">
+<h2 class="section-title"><span class="num">04</span> عناصر المنهج</h2>
+<div class="grid">
+ <article class="card"><span class="tag">أولًا</span><h3>الأهداف التربوية</h3><p><b>مفهوم الهدف التربوي:</b> هو الصياغة التي توضح المخرجات أو نواتج التعلم المقصودة والتي تسعى المدرسة لتحقيقها.</p><p><b>أهميتها ومعاييرها:</b> تمثل حجر الزاوية لقياس النتاجات، وتوجه اختيار المحتوى والأنشطة وطرق التدريس. وينبغي أن تكون شاملة ومناسبة لنواحي شخصية الطالب وواقعية وتتماشى مع قدراته.</p><p><b>الصياغة السلوكية:</b> التركيز على صياغة الأهداف السلوكية الإجرائية القابلة للملاحظة والقياس؛ لاستخدامها في توجيه التعليم والتقويم.</p></article>
+ <article class="card"><span class="tag">ثانيًا</span><h3>محتوى المنهج</h3><p><b>مفهوم وعلاقة المحتوى:</b> مادة التعليم المتمثلة في المعارف والمفاهيم والحقائق التي يتم اختيارها وتنظيمها لتحقيق الأهداف التربوية.</p><p><b>اختيار وتنظيم المحتوى:</b> يتوقف اختيار المحتوى على مدى ارتباطه بالأهداف وصدقه وأهميته الحياتية، كما يخضع لمعايير تنظيم دقيقة مثل الاستمرار والتتابع والتكامل؛ لضمان تقديم مادة علمية متماسكة سيكولوجيًا ومنطقيًا تخدم نمو الطالب.</p></article>
+</div>
+<div class="note">📌 تنبيه للمذاكرة: الملف المرفق يعرض عنوان عناصر المنهج «حتى موضوع أنشطة التعلم»، لكن التفاصيل الظاهرة في الصفحتين تتناول الأهداف التربوية ومحتوى المنهج. لذلك يقتصر هذا الشرح على التفاصيل الموجودة بوضوح في الملف.</div>
+</section>
+
+<section id="exam">
+<div class="exam-intro"><h2 class="section-title"><span class="num">05</span> اختبر معلوماتك</h2><span class="tag">10 أسئلة • اختيار من متعدد</span></div>
+<div class="exam-box" id="quizBox">
+ <div id="quizArea">
+  <div class="qmeta"><span id="qCount">السؤال 1 من 10</span> <span style="float:left" id="answered">تمت الإجابة: 0</span></div>
+  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  <div class="question" id="question"></div>
+  <div class="answers" id="answers"></div>
+  <div class="feedback" id="feedback" aria-live="polite"></div>
+  <div class="exam-controls"><button class="btn secondary" id="prevBtn" onclick="move(-1)">→ السابق</button><button class="btn primary" id="nextBtn" onclick="move(1)">التالي ←</button></div>
+ </div>
+ <div class="result" id="result">
+  <div style="font-size:44px">🏆</div><h3 id="resultTitle">أحسنت!</h3><div class="score" id="score"></div><p id="resultText"></p>
+  <button class="btn primary" onclick="restart()">🔄 إعادة الامتحان</button>
+  <div class="review" id="review"></div>
+ </div>
+</div>
+</section>
+</div>
+</main>
+<footer>تم إعداد هذه الصفحة للمراجعة اعتمادًا على ملف «ملخص كتاب المناهج وتنظيماتها» — كلية التربية النوعية، جامعة الفيوم.</footer>
+<script>
+const questions=[
+{q:"ما المقصود بالمنهج في المفهوم التقليدي؟",a:["جميع الخبرات داخل المدرسة وخارجها","مجموعة المواد والمقررات التي يدرسها الطالب تحت إشراف المدرس","الأنشطة الاجتماعية فقط","كل ما يتعلمه الطالب من البيئة"],c:1,e:"المفهوم التقليدي يركز على المواد والمقررات الدراسية التي يدرسها الطالب."},
+{q:"على ماذا يركز المفهوم الحديث للمنهج؟",a:["حفظ المقررات فقط","الامتحانات النهائية فقط","الأنشطة والخبرات المخططة لتحقيق النمو الشامل","المعلم باعتباره المصدر الوحيد"],c:2,e:"المنهج الحديث يشمل الخبرات والأنشطة داخل المدرسة وخارجها لتحقيق النمو الشامل."},
+{q:"ما معنى كلمة «منهج» في اللغة؟",a:["الطريق الواضح المستقيم","مجموعة الكتب","الاختبار الدراسي","خطة الحصة فقط"],c:0,e:"كلمة منهج مشتقة من نهج، أي الطريق الواضح المستقيم."},
+{q:"أي مما يلي من الأسس الاجتماعية لبناء المنهج؟",a:["النضج الجسمي","الحرية والتعاون وتكافؤ الفرص","الانفجار المعرفي","نقل التراث بالمحاضرة"],c:1,e:"الأسس الاجتماعية ترتبط بالقيم مثل الحرية والتعاون والمساواة وتكافؤ الفرص."},
+{q:"الأسس النفسية تركز على:",a:["طبيعة المتعلم وخصائص نموه","المباني المدرسية فقط","المحتوى دون المتعلم","التراث الثقافي فقط"],c:0,e:"الأسس النفسية تراعي النمو والنضج والاستعداد والفروق الفردية والدوافع."},
+{q:"أي من التالي يرتبط بالأسس المعرفية والثقافية؟",a:["التنافس الشريف","مراعاة النضج","مواكبة التغيرات والانفجار المعرفي","المحاضرة وحدها"],c:2,e:"من الأسس المعرفية والثقافية مواكبة التغيرات المستقبلية والانفجار المعرفي."},
+{q:"في المنهج الحديث، ما دور المعلم؟",a:["ناقل للمعلومات فقط","ملقن يعتمد على المحاضرة فقط","مرشد وموجه ومقوم وميسر للتعلم","لا يتدخل في العملية التعليمية"],c:2,e:"المعلم في المنهج الحديث مرشد وموجه ومقوم ومدير للفصل وميسر للعملية التعليمية."},
+{q:"ما المقصود بالهدف التربوي وفق الملف؟",a:["الصياغة التي توضح نواتج التعلم المقصودة","قائمة أسماء الطلاب","موضوع الكتاب فقط","طريقة شرح المعلم"],c:0,e:"الهدف التربوي يوضح المخرجات أو نواتج التعلم التي تسعى المدرسة لتحقيقها."},
+{q:"أي صفة ينبغي توافرها في الأهداف التربوية؟",a:["أن تكون غامضة","أن تكون واقعية ومناسبة لقدرات الطالب","أن تقتصر على الحفظ","ألا تكون قابلة للقياس"],c:1,e:"ينبغي أن تكون الأهداف شاملة وواقعية ومناسبة لشخصية الطالب وقدراته."},
+{q:"من معايير تنظيم محتوى المنهج المذكورة في الملف:",a:["العشوائية والتكرار","الاستمرار والتتابع والتكامل","الحفظ والتلقين فقط","إلغاء الأهداف"],c:1,e:"ينظم المحتوى وفق معايير منها الاستمرار والتتابع والتكامل."}
+];
+let current=0, chosen=Array(questions.length).fill(null), locked=Array(questions.length).fill(false);
+const $=id=>document.getElementById(id);
+function render(){
+ const item=questions[current];$("qCount").textContent=`السؤال ${current+1} من ${questions.length}`;
+ $("answered").textContent=`تمت الإجابة: ${chosen.filter(x=>x!==null).length}`;
+ $("progress").style.width=`${(chosen.filter(x=>x!==null).length/questions.length)*100}%`;
+ $("question").textContent=item.q;$("answers").innerHTML="";$("feedback").className="feedback";$("feedback").textContent="";
+ item.a.forEach((txt,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=`${["أ","ب","ج","د"][i]}. ${txt}`;
+ if(locked[current]){b.disabled=true;if(i===item.c)b.classList.add("correct");if(chosen[current]===i&&i!==item.c)b.classList.add("wrong");}
+ else if(chosen[current]===i)b.classList.add("selected");
+ b.onclick=()=>select(i);$("answers").appendChild(b)});
+ if(locked[current]){const good=chosen[current]===item.c;$("feedback").textContent=(good?"✓ إجابة صحيحة. ":"✕ إجابة غير صحيحة. ")+item.e;$("feedback").className="feedback "+(good?"good":"bad")}
+ $("prevBtn").disabled=current===0;$("nextBtn").textContent=current===questions.length-1?"إنهاء الامتحان ✓":"التالي ←";
+}
+function select(i){if(locked[current])return;chosen[current]=i;locked[current]=true;render()}
+function move(d){if(d===1&&current===questions.length-1){finish();return}current=Math.max(0,Math.min(questions.length-1,current+d));render()}
+function finish(){
+ const count=chosen.filter((v,i)=>v===questions[i].c).length,pct=Math.round(count/questions.length*100);
+ $("quizArea").style.display="none";$("result").style.display="block";$("score").textContent=`${count} / ${questions.length}`;
+ $("resultTitle").textContent=pct>=80?"ممتاز! أداء رائع 🎉":pct>=60?"أحسنت، استمر في المراجعة 👍":"لا بأس، راجع الشرح وحاول مرة أخرى 💪";
+ $("resultText").textContent=`درجتك ${pct}% — الإجابات الصحيحة ${count} والخاطئة ${questions.length-count}.`;
+ $("review").innerHTML="<h3>مراجعة الإجابات</h3>"+questions.map((q,i)=>{let ok=chosen[i]===q.c;return `<div class="review-item ${ok?"ok":"no"}"><b>${i+1}. ${q.q}</b><br><span>${ok?"🟢 إجابتك صحيحة":"🔴 إجابتك: "+(chosen[i]===null?"لم تتم الإجابة":q.a[chosen[i]])}</span><br><span>الإجابة الصحيحة: <b>${q.a[q.c]}</b></span><br><small>${q.e}</small></div>`}).join("");
+}
+function restart(){current=0;chosen=Array(questions.length).fill(null);locked=Array(questions.length).fill(false);$("quizArea").style.display="block";$("result").style.display="none";render()}
+render();
+</script>
+</body></html>
